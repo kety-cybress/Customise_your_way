@@ -14,20 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2 — Install dependencies
+      # Step 2 — Install dependencies (inside customiseyourway)
       - name: Install dependencies
         run: npm install --legacy-peer-deps
         working-directory: ./customiseyourway
 
-      # Step 3 — Build the project
+      # Step 3 — Build the project (also inside customiseyourway)
       - name: Build project
         run: npm run build
-        # working-directory: ./customiseyourway
+        working-directory: ./customiseyourway
 
       # Step 4 — Verify build folder exists
       - name: Check build folder
         run: ls ./customiseyourway/dist
-        # working-directory: ./customiseyourway
 
       # Step 5 — Deploy to S3
       - name: Deploy to S3
