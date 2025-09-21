@@ -26,7 +26,7 @@ jobs:
 
       # Step 4 — Verify build folder exists
       - name: Check build folder
-        run: ls ./customiseyourway/dist
+        run: ls dist
         working-directory: ./customiseyourway
 
       # Step 5 — Deploy to S3
@@ -39,4 +39,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_KETIAKAHITEYOML_SECRETACCESSKEY }}
           AWS_REGION: us-east-1
           AWS_S3_BUCKET: www.customiseyourway.com
-          SOURCE_DIR: ./customiseyourway/dist
+          SOURCE_DIR: dist
