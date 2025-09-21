@@ -1,0 +1,79 @@
+.checkout-page {
+  background: url("/images/background.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-items {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cart-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cart-details {
+  padding-top: 1rem;
+}
+
+.cart-details h4 {
+  background-color: pink;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.price-summary p {
+  margin: 0.3rem 0;
+}
+
+.checkout-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-location {
+  background-color: hotpink;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  padding: 14px 60px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

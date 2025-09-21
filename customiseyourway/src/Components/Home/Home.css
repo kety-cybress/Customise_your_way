@@ -1,0 +1,134 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff69b4, #add8e6);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #ff1493;
+}
+
+.brand {
+  color: hotpink;
+  font-weight: bold;
+}
+
+.explore-btn {
+  background-color: hotpink;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: deeppink;
+}
+
+.features {
+  margin-top: 50px;
+}
+
+.features h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #ff1493;
+}
+
+.testimonials {
+  margin: 60px 0 30px;
+}
+
+.testimonials h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.testimonial-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.signup-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #ff1493;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-btn:hover {
+  background-color: deeppink;
+}
+.footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

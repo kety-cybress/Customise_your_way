@@ -1,0 +1,12 @@
+*   [33m27864f1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m fixing yml file
+[31m|[m[32m\[m  
+[31m|[m * [33md796e68[m[33m ([m[1;31morigin/master[m[33m)[m Update main.yml
+* [32m|[m [33m79902e7[m updated gitignore
+[32m|[m[32m/[m  
+* [33me1abe94[m Add react-router-dom dependency
+* [33me769341[m Update main.yml
+* [33mfb2b54b[m Update main.yml
+* [33mb83b87c[m Save local changes before pulling
+* [33m4612941[m Fix React and react-router-dom versions
+* [33mc5901dd[m Create main.yml
+* [33mf61e849[m Add dotenv package

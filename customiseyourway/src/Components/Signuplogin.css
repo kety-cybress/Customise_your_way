@@ -1,0 +1,271 @@
+/* Outer wrapper with gradient and palm leaf overlay */
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Palm leaf pseudo-element using CSS mask for decorative flair */
+.palm-leaf {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  mask-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+<path fill="black" d="M...?"/>\
+</svg>');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  top: 10%;
+  right: 5%;
+  pointer-events: none;
+}
+
+/* Form styling */
+.form-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 1;
+  text-align: center;
+}
+
+.form-box h2 {
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.form-box input {
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.9rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-box button {
+  background: #ff5e6c;
+  color: white;
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.form-box button:hover {
+  background: #ff4351;
+}
+
+.switch {
+  margin-top: 0.8rem;
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.switch:hover {
+  color: #003f7f;
+}
+/* Add to your CSS file or inside <style> tag */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top right, #fcb1db, #add8e6);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: url('https://svgshare.com/i/ucF.svg') repeat-x;
+  animation: wave 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 1000px;
+  }
+}
+
+.signup-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid hotpink;
+  border-radius: 8px;
+  background-color: #e7f0ff;
+  font-size: 16px;
+}
+
+.signup-container input:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #ff69b4;
+}
+
+.signup-container a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fcb1db, #add8e6);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wavy bottom */
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: url('https://svgshare.com/i/ucF.svg') repeat-x;
+  animation: wave 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 1000px;
+  }
+}
+
+/* Center container */
+.signup-container {
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  z-index: 1;
+  position: relative;
+}
+
+/* Form header */
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Inputs */
+.signup-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 2px solid hotpink;
+  border-radius: 8px;
+  background-color: #e8f0fe;
+  font-size: 15px;
+}
+
+/* Button */
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: hotpink;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #ff69b4;
+}
+
+/* Link */
+.signup-container a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #007BFF;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
