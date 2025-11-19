@@ -15,12 +15,12 @@ export function AuthProvider({ children }) {
   const URL = "23.22.225.132"
 
   const signup = async (data) => {
-    const res = await axios.post(`http://${URL}:3001/api/auth/signup`, data);
+    const res = await axios.post(`https://customiseyourway-backend.onrender.com/api/auth/signup`, data);
     setUser(res.data.user);
   };
 
   const login = async (identifier, password) => {
-    const res = await axios.post(`http://${URL}:3001/api/auth/login`, {
+    const res = await axios.post(`https://customiseyourway-backend.onrender.com/api/auth/login`, {
       identifier,
       password,
     });
