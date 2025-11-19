@@ -1,0 +1,60 @@
+/* Page container */
+.payment-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffe6f2; /* soft pink */
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h2, h3 {
+  color: #d63384; /* deeper pink */
+  margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #b30059;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ff99c8;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 6px;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 20px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff4da6;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e60073;
+}

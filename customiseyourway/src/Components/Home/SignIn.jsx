@@ -33,11 +33,11 @@ function Signuplogin() {
           ...formData,
           location: formData.addLocationLater ? '' : formData.location,
         };
-        await signup(signupData); // 🔁 Call the signup function from useAuth
+        await signup(signupData);
         alert('Signup successful!');
         navigate('/shop');
       } else {
-        await login(formData.email, formData.password); // ✅ Correct usage
+        await login(formData.email, formData.password);
         alert('Login successful!');
         navigate('/shop');
       }
@@ -48,7 +48,8 @@ function Signuplogin() {
 
   return (
     <div style={containerStyle}>
-      {/* Signup Form */}
+      
+      {/* SIGNUP FORM */}
       <form onSubmit={handleSubmit} style={{ ...formStyle, display: isSignup ? 'block' : 'none' }}>
         <h2 style={titleStyle}>Sign Up</h2>
 
@@ -133,21 +134,19 @@ function Signuplogin() {
         </p>
       </form>
 
-      {/* Login Form */}
+      {/* LOGIN FORM */}
       <form onSubmit={handleSubmit} style={{ ...formStyle, display: isSignup ? 'none' : 'block' }}>
         <h2 style={titleStyle}>Log In</h2>
 
         <input
           name="email"
-          type="text"
-          placeholder="Email"
+          type="email"
+          placeholder="Email or Username"
           value={formData.email}
           onChange={(e) =>
             setFormData((prev) => ({
               ...prev,
               email: e.target.value,
-              phone: e.target.value,
-              username: e.target.value,
             }))
           }
           required
@@ -180,20 +179,12 @@ function Signuplogin() {
         <p onClick={() => setIsSignup(true)} style={linkStyle}>
           Don't have an account? Sign Up
         </p>
-
-        <button
-          type="button"
-          onClick={() => navigate('/checkout')}
-          style={{ ...buttonStyle, backgroundColor: '#ff69b4', marginTop: '1rem' }}
-        >
-          Checkout →
-        </button>
       </form>
     </div>
   );
 }
 
-// 💄 Styles
+/* 🎀 STYLES */
 const containerStyle = {
   background: 'linear-gradient(to right, #fcb1cc, #90dffe)',
   height: '100vh',
@@ -201,7 +192,6 @@ const containerStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   padding: '1rem',
-  flexWrap: 'wrap',
 };
 
 const formStyle = {

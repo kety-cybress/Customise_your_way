@@ -1,88 +1,54 @@
 import React from "react";
+import { useCart } from "./useCart";
+import { useNavigate } from "react-router-dom";
+import { images } from "./Images";
 
 const products = [
-  {
-    name: "Phone Case",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Phone+Case",
-    price: 20,
-  },
-  {
-    name: "White Hoodie",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Hoodie",
-    price: 60,
-  },
-  {
-    name: "Backpack",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Backpack",
-    price: 45,
-  },
-  {
-    name: "Notebook",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Notebook",
-    price: 25,
-  },
-  {
-    name: "Bucket Hat",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Bucket+Hat",
-    price: 30,
-  },
-  {
-    name: "Sneakers",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Sneakers",
-    price: 80,
-  },
-  {
-    name: "Cushion",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Cushion",
-    price: 35,
-  },
-  {
-    name: "Table",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Table",
-    price: 150,
-  },
-  {
-    name: "Pants",
-    img: "https://dummyimage.com/220x220/ffffff/000000&text=Pants",
-    price: 50,
-  },
+  { id: 1, name: "Phone Case", price: 20 },
+  { id: 2, name: "White Hoodie", price: 60 },
+  { id: 3, name: "Backpack", price: 45 },
+  { id: 4, name: "Notebook", price: 25 },
+  { id: 5, name: "Bucket Hat", price: 30 },
+  { id: 6, name: "Sneakers", price: 80 },
+  { id: 7, name: "Cushion", price: 35 },
+  { id: 8, name: "Table", price: 150 },
+  { id: 9, name: "Pants", price: 50 },
 ];
 
-export default function Products() {
+export default function Shop() {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
   return (
     <div style={{ padding: "40px" }}>
       <h1 style={{ textAlign: "center", marginBottom: "40px" }}>Our Products</h1>
       <div
+        data-test-id="product-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           gap: "30px",
         }}
       >
-        {products.map((product, index) => (
+        {products.map((product) => (
           <div
-            key={index}
+            key={product.id}
+            data-test-id="product-card"
             style={{
               border: "1px solid #eee",
               borderRadius: "10px",
               overflow: "hidden",
               boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-              transition: "transform 0.3s, box-shadow 0.3s",
             }}
-            className="product-card"
           >
             <img
-              src={product.img}
+              src={images[product.name] || "/images/placeholder.png"}
               alt={product.name}
-              style={{
-                width: "100%",
-                height: "220px",
-                objectFit: "cover",
-              }}
+              style={{ width: "100%", height: "220px", objectFit: "cover" }}
             />
             <div style={{ padding: "15px", textAlign: "center" }}>
-              <h3 style={{ margin: "10px 0" }}>{product.name}</h3>
-              <p style={{ margin: "10px 0", fontWeight: "bold" }}>R{product.price}</p>
+              <h3>{product.name}</h3>
+              <p style={{ fontWeight: "bold" }}>R{product.price}</p>
               <div style={{ display: "flex", justifyContent: "space-around", marginTop: "10px" }}>
                 <button
                   style={{
@@ -92,14 +58,13 @@ export default function Products() {
                     backgroundColor: "#ff4081",
                     color: "#fff",
                     cursor: "pointer",
-                    transition: "background-color 0.3s",
                   }}
-                  onMouseOver={(e) => (e.target.style.backgroundColor = "#e73370")}
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "#ff4081")}
+                  onClick={() => navigate("/customize", { state: product })}
                 >
                   Customize
                 </button>
                 <button
+                  data-test-id="add-to-cart"
                   style={{
                     padding: "8px 12px",
                     border: "none",
@@ -107,10 +72,8 @@ export default function Products() {
                     backgroundColor: "#2196f3",
                     color: "#fff",
                     cursor: "pointer",
-                    transition: "background-color 0.3s",
                   }}
-                  onMouseOver={(e) => (e.target.style.backgroundColor = "#1976d2")}
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "#2196f3")}
+                  onClick={() => addToCart(product)}
                 >
                   Add to Cart
                 </button>
@@ -119,12 +82,6 @@ export default function Products() {
           </div>
         ))}
       </div>
-      <style>{`
-        .product-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-      `}</style>
     </div>
   );
 }
