@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const navigate = useNavigate();
+  const URL = "23.22.225.132"
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -13,7 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3001/api/login', {
+      const res = await fetch(`http://${URL}:3001/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

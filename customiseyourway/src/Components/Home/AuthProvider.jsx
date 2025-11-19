@@ -12,14 +12,15 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
+  const URL = "23.22.225.132"
 
   const signup = async (data) => {
-    const res = await axios.post("http://localhost:3001/api/auth/signup", data);
+    const res = await axios.post(`http://${URL}:3001/api/auth/signup`, data);
     setUser(res.data.user);
   };
 
   const login = async (identifier, password) => {
-    const res = await axios.post("http://localhost:3001/api/auth/login", {
+    const res = await axios.post(`http://${URL}:3001/api/auth/login`, {
       identifier,
       password,
     });
@@ -31,6 +32,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("user");
   };
 
+  
   return (
     <AuthContext.Provider value={{ user, signup, login, logout }}>
       {children}

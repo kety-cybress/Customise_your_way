@@ -26,17 +26,18 @@ jobs:
 
       # Step 4 — Verify build folder exists
       - name: Check build folder
-        run: ls ./customiseyourway/dist
+        run: ls dist
         working-directory: ./customiseyourway
 
       # Step 5 — Deploy to S3
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --delete
+          args: --delete
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KETIAKAHITE_YOML }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_KETIAKAHITEYOML_SECRETACCESSKEY }}
           AWS_REGION: us-east-1
-          AWS_S3_BUCKET: www.customiseyourway.com
-          SOURCE_DIR: ./customiseyourway/dist
+          AWS_S3_BUCKET: www.customiseyourways.com
+          SOURCE_DIR: customiseyourway/dist
+
