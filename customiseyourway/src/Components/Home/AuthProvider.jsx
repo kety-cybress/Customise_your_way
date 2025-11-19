@@ -32,6 +32,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("user");
   };
 
+  
   return (
     <AuthContext.Provider value={{ user, signup, login, logout }}>
       {children}
