@@ -1,22 +1,33 @@
 .home-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ff69b4, #add8e6);
+  background: linear-gradient(135deg, #ff9de2, #90caf9);
   padding: 40px 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .home-content {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
   margin-bottom: 50px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.home-content:hover {
+  transform: translateY(-5px);
 }
 
 .home-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #ff1493;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  color: #333;
 }
 
 .brand {
@@ -27,18 +38,18 @@
 .explore-btn {
   background-color: hotpink;
   color: white;
-  padding: 12px 25px;
-  margin-top: 20px;
+  padding: 12px 30px;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .explore-btn:hover {
   background-color: deeppink;
+  transform: scale(1.05);
 }
 
 .features {
@@ -47,64 +58,71 @@
 
 .features h2 {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 2rem;
 }
 
 .feature-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
   background: #fff;
   padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
   color: #ff1493;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
-.testimonials {
-  margin: 60px 0 30px;
-}
-
-.testimonials h2 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.testimonial-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
+.card p {
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .cta {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
 .signup-btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 25px;
+  margin-top: 10px;
+  padding: 12px 30px;
   background-color: #ff1493;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .signup-btn:hover {
   background-color: deeppink;
+  transform: scale(1.05);
 }
+
 .footer {
-  margin-top: 4rem;
-  padding: 2rem;
+  margin-top: 60px;
+  padding: 2rem 0;
   background-color: #f8f8f8;
   text-align: center;
   border-top: 1px solid #ddd;
@@ -113,22 +131,5 @@
 .footer-content {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.footer-links {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
   color: #555;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
 }

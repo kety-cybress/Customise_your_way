@@ -15,11 +15,17 @@
   width: 400px;
   height: 400px;
   background: rgba(255, 255, 255, 0.2);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+<path fill="black" d="M...?"/>\
+</svg>');
   mask-image: url('data:image/svg+xml;utf8,\
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
 <path fill="black" d="M...?"/>\
 </svg>');
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   top: 10%;
   right: 5%;

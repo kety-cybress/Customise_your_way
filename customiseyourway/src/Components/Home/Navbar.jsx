@@ -1,11 +1,13 @@
-import React from "react";
+import React from "react"; 
 import "./Navbar.css";
-import { useCart } from './useCart'; // ✅ correct
-import { useNavigate } from "react-router-dom"; // ✅ navigation for 👤 icon
+import { useCart } from './useCart';
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const { cartCount } = useCart();
   const navigate = useNavigate();
+
+  
 
   return (
     <nav className="navbar">
@@ -18,16 +20,23 @@ export default function Navbar() {
         <a href="/shop" className="nav-link">shop</a>
         <a href="/customize" className="nav-link">customize</a>
         <a href="/location" className="nav-link">location</a>
+        <a href="/payment" className="nav-link">payment</a> {/* Added Payment */}
+      </div>
 
-        {/* ✅ Cart link with badge */}
-        <a href="/cart" className="nav-link" style={{ position: "relative" }}>
-          cart/checkout
+      <div className="navbar-right" style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        {/* Cart icon with dynamic badge */}
+        <div
+          className="cart-icon"
+          onClick={() => navigate("/cart")}
+          style={{ position: "relative", cursor: "pointer", fontSize: "1.2rem" }}
+        >
+          🛒
           {cartCount > 0 && (
             <span
               style={{
                 position: "absolute",
                 top: "-8px",
-                right: "-16px",
+                right: "-10px",
                 background: "hotpink",
                 color: "white",
                 padding: "2px 6px",
@@ -38,17 +47,13 @@ export default function Navbar() {
               {cartCount}
             </span>
           )}
-        </a>
+        </div>
 
-        <a href="/payment" className="nav-link">payment</a>
-      </div>
-
-      <div className="navbar-right">
-        {/* ✅ Profile icon with navigation */}
+        {/* Profile icon */}
         <div
           className="profile-icon"
           onClick={() => navigate("/profile")}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fontSize: "1.2rem" }}
         >
           👤
         </div>

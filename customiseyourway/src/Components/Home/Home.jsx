@@ -1,4 +1,3 @@
-// src/Components/Home/Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -9,9 +8,11 @@ export default function Home() {
       {/* Hero Section */}
       <div className="home-content">
         <h1>
-          Welcome to <span className="brand">CustomiseYourWay</span> 💖
+          Welcome to <span className="brand">CustomiseYourWay</span>
         </h1>
-        <p>Where creativity meets personalization.</p>
+        <p className="hero-text">
+          Where creativity meets personalization. Design your items your way!
+        </p>
         <Link to="/shop" className="explore-btn">
           Explore Shop
         </Link>
@@ -36,26 +37,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className="testimonials">
-        <h2>💬 What Our Users Say</h2>
-        <div className="testimonial-box">
-          <p>"Absolutely love my personalized hoodie! 🔥" - Nina</p>
-          <p>"The design tool is so fun and easy to use!" - Thabo</p>
-        </div>
+      {/* Call to Action Section */}
+      <div className="cta">
+        <h2>Start creating your unique style today!</h2>
+        <Link to="/customize" className="signup-btn">
+          Customize Now
+        </Link>
       </div>
 
-
-      {/* ✅ Footer */}
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <p>&copy; {new Date().getFullYear()} CustomiseYourWay. All rights reserved.</p>
-          <div className="footer-links">
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/terms">Terms</Link>
-            <Link to="/privacy">Privacy</Link>
-          </div>
         </div>
       </footer>
     </div>
