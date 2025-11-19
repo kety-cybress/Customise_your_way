@@ -7,6 +7,8 @@ export default function Navbar() {
   const { cartCount } = useCart();
   const navigate = useNavigate();
 
+  
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
